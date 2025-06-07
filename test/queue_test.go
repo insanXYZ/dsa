@@ -8,7 +8,7 @@ import (
 
 func TestQueue(t *testing.T) {
 	arr := []int{1, 2, 3}
-	q := queue.NewQueue()
+	q := queue.NewQueue[int]()
 
 	for _, v := range arr {
 		q.Enqueue(v)

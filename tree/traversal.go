@@ -2,6 +2,7 @@ package tree
 
 import "fmt"
 
+// left > root > right
 func InorderTraversal(root *Node) {
 	if root == nil {
 		return
@@ -12,6 +13,7 @@ func InorderTraversal(root *Node) {
 	InorderTraversal(root.Right)
 }
 
+// root > left > right
 func PreorderTraversal(root *Node) {
 	if root == nil {
 		return
@@ -22,6 +24,7 @@ func PreorderTraversal(root *Node) {
 	PreorderTraversal(root.Right)
 }
 
+// left > right > root
 func PostorderTraversal(root *Node) {
 	if root == nil {
 		return

@@ -5,30 +5,31 @@ import (
 	"testing"
 )
 
-var root *tree.Node
+var bt *tree.BinaryTree
 
 func init() {
-	root = &tree.Node{
-		Value: 1,
+	arr := []int{1, 2, 3}
+	bt = tree.NewBinaryTree()
+
+	for _, v := range arr {
+		bt.Insert(v)
 	}
 
-	root.Left = &tree.Node{
-		Value: 2,
-	}
-
-	root.Right = &tree.Node{
-		Value: 3,
-	}
 }
 
 func TestPostorder(t *testing.T) {
-	tree.PostorderTraversal(root)
+	tree.PostorderTraversal(bt.Node)
 }
 
 func TestPreorder(t *testing.T) {
-	tree.PreorderTraversal(root)
+	tree.PreorderTraversal(bt.Node)
 }
 
 func TestInorder(t *testing.T) {
-	tree.InorderTraversal(root)
+	tree.InorderTraversal(bt.Node)
+}
+
+func TestDelete(t *testing.T) {
+	bt.Delete(3)
+	tree.PostorderTraversal(bt.Node)
 }
