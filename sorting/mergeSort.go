@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package sorting
 
 func merge(x, y []int) []int {
 	var res []int
@@ -28,18 +26,13 @@ func merge(x, y []int) []int {
 	return res
 }
 
-func mergeSort(arr []int) []int {
+func MergeSort(arr []int) []int {
 	if len(arr) < 2 {
 		return arr
 	}
 
-	l := mergeSort(arr[:len(arr)/2])
-	r := mergeSort(arr[len(arr)/2:])
+	l := MergeSort(arr[:len(arr)/2])
+	r := MergeSort(arr[len(arr)/2:])
 
 	return merge(l, r)
-}
-
-func main() {
-	arr := []int{12, 11, 13, 5, 6, 7}
-	fmt.Println(mergeSort(arr))
 }

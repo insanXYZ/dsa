@@ -1,8 +1,6 @@
-package main
+package sorting
 
-import "fmt"
-
-func selectionSort(arr []int) {
+func SelectionSort(arr []int) {
 
 	for i := range len(arr) - 1 {
 
@@ -16,11 +14,4 @@ func selectionSort(arr []int) {
 
 		arr[i], arr[minIdx] = arr[minIdx], arr[i]
 	}
-}
-
-func main() {
-	arr := []int{64, 25, 12, 22, 11}
-	selectionSort(arr)
-
-	fmt.Println(arr)
 }

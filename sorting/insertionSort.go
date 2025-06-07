@@ -1,8 +1,6 @@
-package main
+package sorting
 
-import "fmt"
-
-func insertionSort(arr []int) {
+func InsertionSort(arr []int) {
 
 	for i := range len(arr) {
 
@@ -18,10 +16,4 @@ func insertionSort(arr []int) {
 
 	}
 
-}
-
-func main() {
-	arr := []int{12, 11, 13, 5, 6}
-	insertionSort(arr)
-	fmt.Println(arr)
 }
